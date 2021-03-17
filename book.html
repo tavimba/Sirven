@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Your title</title>
+</head>
+
+<body class="booking-bg" data-spy="scroll" data-target="#mainNav">
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-black ">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block">
+                <!-- hidden spacer to center brand on mobile --></span>
+            <a class="navbar-brand" href="index.html">
+                <img class="nav-img" src="../imgs/logo2trans.png" alt="Company Logo" height="40px;">
+            </a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 " id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap centre">
+                <li class="nav-item active">
+                <li class="nav-item"><a class="nav-link " href="../index.html">Accueil</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+
+                <li class="nav-item"><a class="nav-link " href="services.html">Nos services
+                    </a></li>
+                <li class="nav-item nav-item-light"><a class="nav-link active" href="book.html">Appelez nous</a></li>
+
+                <button class="btn btn-primary btn-nav">
+
+                    <a class="nav-link" href="tel:07743263168"> <img class="phone" src="../imgs/phone.png"><strong>Call us: 07743263168</strong>
+                    </a>
+
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-12 largeWidget">
+
+                <iframe class="bookingMargins" src="https://5f6a4729248b7.trial.easytaxioffice.com/booking?site_key=7e3f3d3085b900d598bc40543d611575" id="eto-iframe-booking" allow="geolocation" width="100%" height="250" scrolling="no" frameborder="0" style="width:1px; min-width:100%; border:0;"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder">
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js"></script>
+
+    <script>
+        $(function() {
+            $('#mainNav a').on('click', function(event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500, 'easeInOutExpo');
+                return false;
+            });
+
+            // Activate scrollspy to add active class to navbar items on scroll
+            $('body').scrollspy({
+                target: '#mainNav'
+            });
+
+            // Closes responsive menu when a link is clicked
+            $('.navbar-collapse>ul>li>a').click(function() {
+                $('.navbar-collapse').collapse('hide');
+            });
+        });
+
+    </script>
+    <script>
+        $(function() {
+            $("#nav-placeholder").load("nav.html");
+        });
+
+    </script>
+    <script>
+        $(function() {
+            $("#footer-placeholder").load("footer.html");
+        });
+
+    </script>
+    <script src="https://5f6a4729248b7.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js"></script>
+    <script>
+        iFrameResize({
+            log: false,
+            targetOrigin: '*',
+            checkOrigin: false
+        }, "iframe#eto-iframe-booking");
+
+    </script>
+</body>
+
+</html>
